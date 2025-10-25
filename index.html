@@ -268,6 +268,66 @@
       animation: pulse 2s infinite;
     }
 
+    /* About accordion */
+details.about {
+  background: #FFF9F6;
+  border: 1px solid rgba(200, 85, 61, 0.14);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+details.about summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+details.about summary::-webkit-details-marker { display: none; }
+
+details.about summary .about-icon {
+  font-size: 1.5rem;
+  width: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+details.about summary .about-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+details.about summary .about-arrow {
+  margin-left: auto;
+  color: #C8553D;
+  font-size: 1.2rem;
+  transition: transform .25s ease;
+}
+
+details.about[open] summary .about-arrow {
+  transform: rotate(90deg);
+}
+
+details.about .about-content {
+  padding: 0 1.25rem 1rem 3.25rem; /* indent to align with icon */
+  color: #555;
+  line-height: 1.55;
+  border-top: 1px dashed rgba(200, 85, 61, 0.2);
+  background: #FFFAF7;
+}
+
+/* hover/active to match your link cards */
+details.about:hover {
+  box-shadow: 0 8px 20px rgba(200, 85, 61, 0.12);
+  border-color: #FFD5C2;
+  background: #FFEFE7;
+}
+
+
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.5; }
@@ -337,14 +397,43 @@
         <h2 class="section-title">Community</h2>
         <div class="links">
           <!-- Curator Call -->
-          <a href="https://form.jotform.com/252677492624063" class="link">
+          <!-- <a href="https://form.jotform.com/252677492624063" class="link">
             <span class="link-icon">📍</span>
             <div class="link-content">
               <div class="link-title">A Call for Volunteer Community Curators</div>
               <div class="link-desc">Be part of the We Be In The City founding curator team.</div>
             </div>
             <span class="link-arrow">→</span>
-          </a>
+          </a> -->
+
+          <!-- About -->
+  <h2 class="section-title">About</h2>
+    <details class="about">
+    <summary>
+      <span class="about-icon">🧭</span>
+      <span class="about-title">What is We Be In The City?</span>
+      <span class="about-arrow">›</span>
+    </summary>
+    <div class="about-content">
+      <br>
+      <p><strong>We Be In The City (WBITC)</strong> is a social vibe curation platform that helps people explore, savor, and fall in love with their city again. Making plans can be overwhelming; between budgets, groups, and vibes, the fun often gets lost in the planning.</p>
+      <br>
+      <p><strong>WBITC simplifies the process by asking one key question: What’s the vibe?</strong> Whether it’s a date, family outing, or night with friends, we surface curated recommendations that fit your mood and budget.</p>
+      <br>
+      <p>A love letter to Atlanta, WBITC celebrates the city’s culture, diversity, and local gems. From hidden spots to family-friendly adventures, our curations center accessibility, affordability, and inclusivity. <em>Always ATL, always authentic.</em></p>
+      <br>
+      <p><strong>What’s next?</strong> We’re starting in Atlanta, and as we grow, we’ll expand to new cities, bringing the same vibe and community-powered curations to more places.</p>
+    </div>
+  </details>
+
+  <a href="https://www.tiktok.com/t/ZTMx2oh9e/" class="link">
+  <span class="link-icon">🎥</span>
+  <div class="link-content">
+    <div class="link-title">Watch Our Intro Video</div>
+    <div class="link-desc">Hear from our founder about the vision behind We Be In The City</div>
+  </div>
+  <span class="link-arrow">→</span>
+</a>
 
           <!-- Facebook -->
           <a href="https://www.facebook.com/profile.php?id=61580206245381" class="link">
@@ -356,6 +445,7 @@
             <span class="link-arrow">→</span>
           </a>
 
+          
           <!-- Beta tester -->
           <!-- 
           <a href="https://form.jotform.com/252496550998071" class="link">
@@ -419,6 +509,7 @@
       <div class="social-links">
         <a href="https://instagram.com/webeinthecity" class="social-link" aria-label="Instagram"><img src="/images/instagram.png" alt="Instagram"></a>
         <a href="https://www.facebook.com/profile.php?id=61580206245381" class="social-link" aria-label="Facebook"><img src="/images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@webeinthecity_atl" class="social-link" aria-label="TikTok"><img src="/images/tiktok.png" alt="TikTok"></a>
       </div>
     </div>
   </div>
